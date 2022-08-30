@@ -6,8 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public final class ValidatorTest {
-    public static class StringSchemeTest {
-        StringScheme scheme;
+    public static final class StringSchemeTest {
+        private StringScheme scheme;
+        private final int minLength = 3;
         @BeforeEach
         public void beforeEach() {
             Validator v = new Validator();
@@ -30,7 +31,7 @@ public final class ValidatorTest {
         }
         @Test
         public void testWithMinLength() {
-            scheme.minLength(3);
+            scheme.minLength(minLength);
             assertThat(scheme.isValid("str")).isEqualTo(true);
             assertThat(scheme.isValid("12")).isEqualTo(false);
         }
@@ -42,7 +43,7 @@ public final class ValidatorTest {
         }
         @Test
         public void testWithAllConditions() {
-            scheme.required().minLength(3).contains("s");
+            scheme.required().minLength(minLength).contains("s");
             assertThat(scheme.isValid("")).isEqualTo(false);
             assertThat(scheme.isValid(null)).isEqualTo(false);
             assertThat(scheme.isValid("str")).isEqualTo(true);
