@@ -1,10 +1,10 @@
-package hexlet.code;
+package hexlet.code.schemes;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public abstract class AbstractScheme<T> {
+public abstract class BaseScheme<T> {
     private final List<Predicate<T>> conditions = new ArrayList<>();
 
     public final void addCondition(Predicate<T> condition) {

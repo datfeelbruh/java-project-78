@@ -1,6 +1,6 @@
-package hexlet.code;
+package hexlet.code.schemes;
 
-public final class StringScheme extends AbstractScheme<String> {
+public final class StringScheme extends BaseScheme<String> {
     public StringScheme required() {
         addCondition(v -> v != null && !v.isEmpty());
         return this;
