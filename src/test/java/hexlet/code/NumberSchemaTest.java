@@ -38,7 +38,7 @@ public final class NumberSchemaTest {
         numberSchema.positive();
         assertThat(numberSchema.isValid(positiveNumber)).isEqualTo(true);
         assertThat(numberSchema.isValid(negativeNumber)).isEqualTo(false);
-        assertThat(numberSchema.isValid(0)).isEqualTo(true);
+        assertThat(numberSchema.isValid(0)).isEqualTo(false);
         assertThat(numberSchema.isValid("3")).isEqualTo(false);
     }
     @Test
