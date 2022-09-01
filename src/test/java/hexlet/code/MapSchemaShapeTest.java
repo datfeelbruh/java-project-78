@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.schemas.BaseScheme;
+import hexlet.code.schemas.BaseSchema;
 import hexlet.code.schemas.MapSchema;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,7 @@ public final class MapSchemaShapeTest {
     public void beforeEach() {
         Validator v = new Validator();
         schema = v.map();
-        Map<String, BaseScheme> schemas = new HashMap<>();
+        Map<String, BaseSchema> schemas = new HashMap<>();
         schemas.put("name", v.string().required());
         schemas.put("age", v.number().positive());
         schema.shape(schemas);

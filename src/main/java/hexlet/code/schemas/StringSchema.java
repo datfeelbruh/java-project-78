@@ -2,7 +2,7 @@ package hexlet.code.schemas;
 
 import java.util.Objects;
 
-public final class StringSchema extends BaseScheme {
+public final class StringSchema extends BaseSchema {
     public StringSchema required() {
         addCondition(v -> v instanceof String && !Objects.equals(v, ""));
         return this;

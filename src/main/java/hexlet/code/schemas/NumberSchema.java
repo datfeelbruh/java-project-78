@@ -1,7 +1,7 @@
 package hexlet.code.schemas;
 
 
-public final class NumberSchema extends BaseScheme {
+public final class NumberSchema extends BaseSchema {
 
     public NumberSchema positive() {
         addCondition(v -> v == null || (Integer) v >= 0);
