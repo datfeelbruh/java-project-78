@@ -1,7 +1,7 @@
 package hexlet.code;
 
-import hexlet.code.schemes.BaseScheme;
-import hexlet.code.schemes.MapSchema;
+import hexlet.code.schemas.BaseScheme;
+import hexlet.code.schemas.MapSchema;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
