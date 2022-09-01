@@ -28,6 +28,9 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
+
+apply plugin: 'com.adarshr.test-logger'
+
 jacoco {
     toolVersion = "0.8.8"
     reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
