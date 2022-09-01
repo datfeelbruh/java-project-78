@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.function.Predicate;
 
 public abstract class BaseScheme {
-    private final List<Predicate<Object>> conditions = new ArrayList<>();
+    private final List<Predicate> conditions = new ArrayList<>();
 
-    public final void addCondition(Predicate<Object> condition) {
+    public final void addCondition(Predicate condition) {
         conditions.add(condition);
     }
 
@@ -16,7 +16,7 @@ public abstract class BaseScheme {
     }
 
     public final boolean checkValue(Object value) {
-        for (Predicate<Object> condition : conditions) {
+        for (Predicate condition : conditions) {
             if (!condition.test(value)) {
                 return false;
             }
